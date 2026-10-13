@@ -1,0 +1,2125 @@
+/* =========================================================
+   HAB HOUSE CORPORATION SAC
+   STYLE.CSS
+   Identidad: Azul noche + Dorado + Plata
+========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES DE COLOR
+========================================================= */
+
+:root {
+
+    --azul-noche: #061426;
+    --azul-profundo: #081c33;
+    --azul: #0d3152;
+    --azul-claro: #17476d;
+
+    --dorado: #d99a00;
+    --dorado-claro: #f5b51b;
+    --dorado-brillo: #ffc83d;
+
+    --blanco: #ffffff;
+    --blanco-suave: #f5f6f8;
+
+    --plata: #c5c9ce;
+    --gris: #8d959e;
+    --gris-oscuro: #454c54;
+
+    --negro: #02070d;
+
+    --sombra: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================================================
+   2. RESET GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--blanco);
+
+    color: #20252b;
+
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   3. SELECCIÓN DE TEXTO
+========================================================= */
+
+::selection {
+    background: var(--dorado);
+    color: var(--azul-noche);
+}
+
+
+/* =========================================================
+   4. SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--azul-noche);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dorado);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dorado-claro);
+}
+
+
+/* =========================================================
+   5. HEADER
+========================================================= */
+
+.header {
+
+    width: 100%;
+    height: 110px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(6, 20, 38, 0.97);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(217, 154, 0, 0.25);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+
+    width: 85px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   6. NAVEGACIÓN
+========================================================= */
+
+.nav {
+
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.nav a {
+
+    color: var(--blanco);
+
+    font-size: 14px;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+
+/* Línea dorada debajo */
+
+.nav a:not(.btn-nav)::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--dorado);
+
+    transition: 0.3s ease;
+}
+
+.nav a:not(.btn-nav):hover::after {
+
+    width: 100%;
+}
+
+.nav a:not(.btn-nav):hover {
+
+    color: var(--dorado-claro);
+}
+
+
+/* BOTÓN DEL HEADER */
+
+.btn-nav {
+
+    background: var(--dorado);
+
+    color: var(--azul-noche) !important;
+
+    padding: 12px 22px;
+
+    font-weight: bold;
+
+    border: 1px solid var(--dorado);
+
+    transition: 0.3s ease;
+}
+
+.btn-nav:hover {
+
+    background: var(--dorado-claro);
+
+    border-color: var(--dorado-claro);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(217, 154, 0, 0.25);
+}
+
+
+/* =========================================================
+   7. BOTÓN MENÚ MOBILE
+========================================================= */
+
+.menu-btn {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: var(--blanco);
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   8. BOTONES GENERALES
+========================================================= */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: var(--dorado);
+
+    color: var(--azul-noche);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    border: 1px solid var(--dorado);
+
+    transition: all 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Brillo */
+
+.btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    transition: 0.4s;
+}
+
+.btn:hover::before {
+
+    left: 100%;
+}
+
+.btn:hover {
+
+    background: var(--dorado-claro);
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(217, 154, 0, 0.25);
+}
+
+
+/* BOTÓN OUTLINE */
+
+.btn-outline {
+
+    background: transparent;
+
+    color: var(--blanco);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline:hover {
+
+    background: var(--blanco);
+
+    color: var(--azul-noche);
+
+    border-color: var(--blanco);
+}
+
+
+/* =========================================================
+   9. HERO
+========================================================= */
+
+.hero {
+
+    min-height: calc(100vh - 90px);
+
+    padding: 80px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(23, 71, 109, 0.35),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--azul-noche),
+            var(--azul-profundo)
+        );
+
+    color: var(--blanco);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Línea decorativa */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border: 1px solid rgba(217, 154, 0, 0.12);
+
+    border-radius: 50%;
+
+    right: -150px;
+    bottom: -150px;
+}
+
+
+/* CONTENIDO */
+
+.hero-content {
+
+    max-width: 650px;
+
+    animation: aparecer 1s ease forwards;
+}
+
+
+.hero-small {
+
+    display: inline-block;
+
+    color: var(--dorado-claro);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+    position: relative;
+
+    padding-left: 45px;
+}
+
+
+/* Línea antes del texto */
+
+.hero-small::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 32px;
+    height: 2px;
+
+    background: var(--dorado);
+}
+
+
+.hero h1 {
+
+    font-size: clamp(45px, 5vw, 76px);
+
+    line-height: 1.03;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+
+    letter-spacing: -2px;
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: var(--dorado-claro);
+}
+
+
+.hero p {
+
+    max-width: 560px;
+
+    font-size: 18px;
+
+    color: var(--plata);
+
+    margin-bottom: 38px;
+}
+
+
+/* BOTONES HERO */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* IMAGEN HERO */
+
+.hero-image {
+
+    position: relative;
+}
+
+
+/* Marco dorado */
+
+.hero-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid var(--dorado);
+
+    top: 18px;
+    left: 18px;
+
+    z-index: 0;
+}
+
+
+.hero-image img {
+
+    height: 600px;
+
+    object-fit: cover;
+
+    position: relative;
+
+    z-index: 1;
+
+    box-shadow: var(--sombra);
+}
+
+
+/* =========================================================
+   10. SECCIONES GENERALES
+========================================================= */
+
+section {
+
+    padding: 120px 7%;
+}
+
+
+/* ETIQUETA */
+
+.section-label {
+
+    display: block;
+
+    color: var(--dorado);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+
+/* TÍTULOS */
+
+.section-header h2,
+.about-content h2,
+.cta h2 {
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   11. ABOUT / NOSOTROS
+========================================================= */
+
+.about {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    background: var(--blanco);
+}
+
+
+/* Imagen */
+
+.about-image {
+
+    position: relative;
+}
+
+
+/* Línea dorada */
+
+.about-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-left: 3px solid var(--dorado);
+
+    border-bottom: 3px solid var(--dorado);
+
+    bottom: -20px;
+    left: -20px;
+}
+
+
+.about-image img {
+
+    height: 550px;
+
+    object-fit: cover;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* Texto */
+
+.about-content h2 {
+
+    color: var(--azul-noche);
+}
+
+
+.about-content p {
+
+    color: var(--gris-oscuro);
+
+    margin-bottom: 20px;
+}
+
+
+/* LINK */
+
+.text-link {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--dorado);
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.text-link:hover {
+
+    color: var(--azul);
+}
+
+
+/* =========================================================
+   12. SERVICES
+========================================================= */
+
+.services {
+
+    background: var(--blanco-suave);
+}
+
+
+/* CABECERA */
+
+.section-header {
+
+    max-width: 800px;
+
+    margin-bottom: 60px;
+}
+
+
+.section-header p {
+
+    color: var(--gris-oscuro);
+
+    font-size: 17px;
+}
+
+
+/* GRID */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* TARJETA */
+
+.service-card {
+
+    background: var(--blanco);
+
+    padding: 35px;
+
+    min-height: 290px;
+
+    border: 1px solid #e5e7ea;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: all 0.35s ease;
+}
+
+
+/* Línea dorada superior */
+
+.service-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 4px;
+
+    background: var(--dorado);
+
+    transition: 0.35s ease;
+}
+
+
+.service-card:hover::before {
+
+    width: 100%;
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--sombra);
+
+    border-color: rgba(217, 154, 0, 0.35);
+}
+
+
+/* ICONO */
+
+.service-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+
+    filter: grayscale(0.3);
+}
+
+
+/* TÍTULO */
+
+.service-card h3 {
+
+    color: var(--azul-noche);
+
+    font-size: 22px;
+
+    margin-bottom: 14px;
+}
+
+
+/* DESCRIPCIÓN */
+
+.service-card p {
+
+    color: var(--gris-oscuro);
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* LINK */
+
+.service-card a {
+
+    color: var(--dorado);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.service-card a:hover {
+
+    color: var(--azul);
+}
+
+
+/* =========================================================
+   13. PROJECTS
+========================================================= */
+
+.projects {
+
+    background: var(--blanco);
+}
+
+
+/* GRID */
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 60px;
+}
+
+
+/* CARD */
+
+.project-card {
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: var(--azul-noche);
+}
+
+
+/* IMAGEN */
+
+.project-card img {
+
+    height: 450px;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+    opacity: 0.9;
+}
+
+
+.project-card:hover img {
+
+    transform: scale(1.07);
+
+    opacity: 0.7;
+}
+
+
+/* INFORMACIÓN */
+
+.project-info {
+
+    padding: 25px;
+
+    color: var(--blanco);
+
+    background: var(--azul-noche);
+}
+
+
+.project-info span {
+
+    color: var(--dorado-claro);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+
+.project-info h3 {
+
+    font-size: 23px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   14. WHY US
+========================================================= */
+
+.why-us {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(23, 71, 109, 0.4),
+            transparent 35%
+        ),
+
+        var(--azul-noche);
+
+    color: var(--blanco);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Línea decorativa */
+
+.why-us::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(217, 154, 0, 0.12);
+
+    border-radius: 50%;
+
+    right: -250px;
+    bottom: -300px;
+}
+
+
+/* TÍTULO */
+
+.why-us .section-header h2 {
+
+    color: var(--blanco);
+}
+
+
+/* FEATURES */
+
+.features {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px;
+}
+
+
+.features article {
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    padding-top: 25px;
+
+    transition: 0.3s;
+}
+
+
+.features article:hover {
+
+    border-color: var(--dorado);
+
+    transform: translateY(-5px);
+}
+
+
+.features article span {
+
+    color: var(--dorado);
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.features h3 {
+
+    font-size: 23px;
+
+    margin: 18px 0;
+}
+
+
+.features p {
+
+    color: var(--plata);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   15. CTA
+========================================================= */
+
+.cta {
+
+    background:
+
+        linear-gradient(
+            110deg,
+            var(--azul-profundo),
+            var(--azul)
+        );
+
+    color: var(--blanco);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Decoración */
+
+.cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border: 2px solid rgba(217, 154, 0, 0.15);
+
+    border-radius: 50%;
+
+    right: 5%;
+
+    top: -100px;
+}
+
+
+.cta h2 {
+
+    color: var(--blanco);
+}
+
+
+.cta p {
+
+    color: var(--plata);
+
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   16. FOOTER
+========================================================= */
+
+.footer {
+
+    background: var(--negro);
+
+    color: var(--blanco);
+
+    padding: 80px 7% 20px;
+}
+
+
+/* CONTENIDO */
+
+.footer-content {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 60px;
+}
+
+
+/* LOGO */
+
+.footer-logo {
+
+    width: 150px;
+
+    margin-bottom: 20px;
+}
+
+
+/* TEXTOS */
+
+.footer p {
+
+    color: var(--gris);
+
+    font-size: 14px;
+}
+
+
+/* TÍTULOS */
+
+.footer h3 {
+
+    color: var(--dorado-claro);
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* LINKS */
+
+.footer a {
+
+    display: block;
+
+    color: var(--gris);
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+
+    transition: 0.3s;
+}
+
+
+.footer a:hover {
+
+    color: var(--dorado-claro);
+
+    transform: translateX(4px);
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+
+    margin-top: 60px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   17. ANIMACIONES
+========================================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* Animación flotante */
+
+@keyframes flotar {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-8px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   18. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+
+    .header {
+
+        padding: 0 5%;
+
+    }
+
+
+    .hero {
+
+        padding: 70px 5%;
+
+        gap: 40px;
+
+    }
+
+
+    section {
+
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
+
+
+    .services-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .features {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   19. RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+
+    /* HEADER */
+
+    .header {
+
+        height: 75px;
+
+        padding: 0 6%;
+
+    }
+
+
+    .logo img {
+
+        width: 125px;
+
+    }
+
+
+    /* MENU */
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+    .nav {
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: var(--azul-noche);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 20px 6%;
+
+        border-top: 1px solid rgba(217, 154, 0, 0.25);
+
+    }
+
+
+    .nav.active {
+
+        display: flex;
+
+    }
+
+
+    .nav a {
+
+        padding: 15px 0;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    }
+
+
+    .nav a:not(.btn-nav)::after {
+
+        display: none;
+
+    }
+
+
+    .btn-nav {
+
+        text-align: center;
+
+        margin-top: 15px;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        padding: 80px 6%;
+
+        gap: 60px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+
+    .hero-image img {
+
+        height: 400px;
+
+    }
+
+
+    .hero-image::before {
+
+        top: 10px;
+        left: 10px;
+
+    }
+
+
+    /* ABOUT */
+
+    .about {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 90px 6%;
+
+    }
+
+
+    .about-image img {
+
+        height: 400px;
+
+    }
+
+
+    /* SECCIONES */
+
+    section {
+
+        padding: 90px 6%;
+
+    }
+
+
+    /* SERVICIOS */
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* PROJECTS */
+
+    .projects-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .project-card img {
+
+        height: 400px;
+
+    }
+
+
+    /* WHY US */
+
+    .features {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    /* CTA */
+
+    .cta {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+}
+
+
+/* =========================================================
+   20. MOBILE PEQUEÑO
+========================================================= */
+
+@media (max-width: 450px) {
+
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        text-align: center;
+
+    }
+
+
+    .hero-image img {
+
+        height: 350px;
+
+    }
+
+
+    .about-image img {
+
+        height: 350px;
+
+    }
+
+
+    .service-card {
+
+        padding: 28px;
+
+    }
+
+
+    .project-card img {
+
+        height: 350px;
+
+    }
+
+}
+
+
+/* =========================================================
+   OFERTAS DE LA SEMANA
+========================================================= */
+
+.weekly-offers {
+    background: #f5f6f8;
+    padding: 90px 7%;
+    overflow: hidden;
+}
+
+.offers-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.offers-heading h2 {
+    color: var(--azul-noche);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.offers-heading p {
+    color: var(--gris-oscuro);
+    max-width: 650px;
+}
+
+.offers-controls {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.offers-controls button {
+    width: 46px;
+    height: 46px;
+    border: 1px solid #d9dde2;
+    background: white;
+    color: var(--azul-noche);
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.offers-controls button:hover {
+    background: var(--dorado);
+    border-color: var(--dorado);
+}
+
+.offers-track {
+    display: grid;
+    grid-auto-columns: calc((100% - 60px) / 3);
+    grid-auto-flow: column;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 5px 2px 18px;
+}
+
+.offers-track::-webkit-scrollbar {
+    display: none;
+}
+
+.offer-card {
+    min-width: 0;
+    background: white;
+    border: 1px solid #e5e7ea;
+    scroll-snap-align: start;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(6, 20, 38, 0.12);
+}
+
+.offer-image {
+    display: block;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    background: var(--azul-noche);
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.offer-card:hover .offer-image img {
+    transform: scale(1.06);
+}
+
+.offer-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    background: var(--dorado);
+    color: var(--azul-noche);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.offer-info {
+    padding: 25px;
+}
+
+.offer-category {
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.offer-info h3 {
+    color: var(--azul-noche);
+    font-size: 22px;
+    line-height: 1.25;
+    margin: 12px 0;
+}
+
+.offer-info p {
+    min-height: 48px;
+    color: var(--gris-oscuro);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.offer-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #e5e7ea;
+    color: var(--azul-noche);
+    font-size: 13px;
+    font-weight: bold;
+    transition: color 0.25s ease;
+}
+
+.offer-link span {
+    color: var(--dorado);
+    font-size: 22px;
+}
+
+.offer-link:hover {
+    color: var(--dorado);
+}
+
+.offers-progress {
+    height: 3px;
+    background: #dfe2e5;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.offers-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--dorado);
+    transition: width 0.2s ease;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .offers-track {
+        grid-auto-columns: calc((100% - 30px) / 2);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+    .weekly-offers {
+        padding: 75px 6%;
+    }
+
+    .offers-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .offers-controls {
+        align-self: flex-end;
+    }
+
+    .offers-track {
+    display: grid;
+    grid-auto-columns: calc((100% - 60px) / 3);
+    grid-auto-flow: column;
+    gap: 30px;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-left: 0;
+    scrollbar-width: none;
+
+    padding: 5px 0 18px;
+    margin: 0;
+    }
+
+    .offer-card {
+    min-width: 0;
+    scroll-snap-align: start;
+    }
+
+    .offer-image {
+        height: 220px;
+    }
+
+    .offer-info {
+        padding: 22px;
+    }
+}
+
+/* =========================================
+   BANNER PRINCIPAL HAB HOUSE
+========================================= */
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: clamp(420px, 42vw, 650px);
+    padding: 0 !important;
+    margin: 0;
+    overflow: hidden;
+    background: var(--azul-noche);
+}
+
+.hero-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.hero-slide > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(2, 7, 13, 0.88) 0%,
+        rgba(6, 20, 38, 0.70) 43%,
+        rgba(6, 20, 38, 0.12) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(650px, 75%);
+    color: var(--blanco);
+}
+
+.hero-label {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--dorado-brillo);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero-content h1,
+.hero-content h2 {
+    max-width: 650px;
+    margin: 0 0 22px;
+    color: var(--blanco);
+    font-size: clamp(36px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+.hero-content p {
+    max-width: 540px;
+    margin: 0 0 30px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(15px, 1.5vw, 18px);
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    min-height: 52px;
+    padding: 14px 24px;
+    background: var(--dorado-brillo);
+    color: var(--azul-noche);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.hero-button span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.hero-button:hover {
+    background: var(--blanco);
+    transform: translateY(-2px);
+}
+
+/* FLECHAS DEL BANNER */
+
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 68px;
+    padding: 0;
+    border: 0;
+    background: rgba(6, 20, 38, 0.45);
+    color: var(--blanco);
+    font-size: 46px;
+    font-weight: 300;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.hero-arrow:hover {
+    background: var(--dorado);
+    color: var(--azul-noche);
+}
+
+.hero-prev {
+    left: 0;
+}
+
+.hero-next {
+    right: 0;
+}
+
+/* PUNTOS INFERIORES */
+
+.hero-dots {
+    position: absolute;
+    right: 0;
+    bottom: 24px;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-dot {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: 1px solid var(--blanco);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.hero-dot.active {
+    border-color: var(--dorado-brillo);
+    background: var(--dorado-brillo);
+    transform: scale(1.2);
+}
+
+/* =========================================
+   FRANJA DE BENEFICIOS
+========================================= */
+
+.benefits-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    padding: 28px 7% !important;
+    background: var(--blanco);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 18px 14px;
+    background: var(--blanco-suave);
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.benefit-item:hover {
+    border-bottom-color: var(--dorado);
+    transform: translateY(-3px);
+}
+
+.benefit-icon {
+    display: flex;
+    flex: 0 0 52px;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: var(--azul-noche);
+    color: var(--dorado-brillo);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.benefit-item h3 {
+    margin: 0 0 4px;
+    color: var(--azul-noche);
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.benefit-item p {
+    margin: 0;
+    color: var(--gris-oscuro);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .hero-slider {
+        height: 500px;
+    }
+
+    .hero-slide {
+        padding-right: 8%;
+        padding-left: 8%;
+    }
+
+    .benefits-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 24px 5% !important;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .hero-slider {
+        height: 490px;
+    }
+
+    .hero-slide {
+        align-items: center;
+        padding: 50px 8%;
+    }
+
+    .hero-slide > img {
+        object-position: center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(2, 7, 13, 0.88),
+            rgba(6, 20, 38, 0.55)
+        );
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-label {
+        margin-bottom: 15px;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        font-size: clamp(32px, 9vw, 44px);
+        letter-spacing: -0.7px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-button {
+        gap: 15px;
+        min-height: 48px;
+        padding: 12px 16px;
+        font-size: 10px;
+    }
+
+    .hero-arrow {
+        width: 32px;
+        height: 54px;
+        font-size: 34px;
+    }
+
+    .hero-dots {
+        bottom: 18px;
+    }
+
+    .benefits-strip {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 22px 6% !important;
+    }
+
+    .benefit-item {
+        padding: 14px;
+    }
+}

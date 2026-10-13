@@ -1,0 +1,602 @@
+/* =========================================================
+   HAB HOUSE CORPORATION SAC
+   STYLESPROYECTOS.CSS
+========================================================= */
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.projects-hero {
+
+    min-height: 65vh;
+
+    padding: 100px 7%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--azul-noche),
+            var(--azul-profundo)
+        );
+
+    color: var(--blanco);
+
+}
+
+
+.projects-hero-content {
+
+    max-width: 750px;
+
+}
+
+
+.projects-hero h1 {
+
+    font-size: clamp(50px, 6vw, 82px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.projects-hero h1 span {
+
+    display: block;
+
+    color: var(--dorado-claro);
+
+}
+
+
+.projects-hero p {
+
+    max-width: 600px;
+
+    color: var(--plata);
+
+    font-size: 18px;
+
+}
+
+
+.projects-hero-number {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+}
+
+
+.projects-hero-number span {
+
+    color: var(--gris);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.projects-hero-number strong {
+
+    color: var(--dorado);
+
+    font-size: 100px;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.projects-gallery {
+
+    padding: 120px 7%;
+
+    background: var(--blanco);
+
+}
+
+
+.projects-gallery-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.projects-gallery-card {
+
+    background: var(--blanco);
+
+    border: 1px solid #e3e6e9;
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+
+}
+
+
+.projects-gallery-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--sombra);
+
+    border-color: rgba(217, 154, 0, 0.4);
+
+}
+
+
+.projects-large {
+
+    grid-row: span 2;
+
+}
+
+
+.projects-image {
+
+    overflow: hidden;
+
+}
+
+
+.projects-image img {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+.projects-large .projects-image img {
+
+    height: 520px;
+
+}
+
+
+.projects-gallery-card:hover img {
+
+    transform: scale(1.06);
+
+}
+
+
+.projects-card-info {
+
+    padding: 30px;
+
+}
+
+
+.projects-card-info span {
+
+    color: var(--dorado);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.projects-card-info h3 {
+
+    color: var(--azul-noche);
+
+    font-size: 26px;
+
+    margin: 8px 0 10px;
+
+}
+
+
+.projects-card-info p {
+
+    color: var(--gris-oscuro);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   TARJETAS SIN IMAGEN
+========================================================= */
+
+.projects-dark {
+
+    min-height: 350px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(23, 71, 109, 0.6),
+            transparent 40%
+        ),
+
+        var(--azul-noche);
+
+    color: var(--blanco);
+
+}
+
+
+.projects-dark:hover {
+
+    background: var(--azul);
+
+}
+
+
+.projects-card-number {
+
+    color: var(--dorado);
+
+    font-size: 45px;
+
+    font-weight: bold;
+
+}
+
+
+.projects-dark .projects-card-info {
+
+    padding: 0;
+
+}
+
+
+.projects-dark .projects-card-info h3 {
+
+    color: var(--blanco);
+
+}
+
+
+.projects-dark .projects-card-info p {
+
+    color: var(--plata);
+
+}
+
+
+/* =========================================================
+   TIPOS DE PROYECTOS
+========================================================= */
+
+.projects-types {
+
+    padding: 120px 7%;
+
+    background: var(--blanco-suave);
+
+}
+
+
+.projects-types-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.projects-types-grid article {
+
+    padding: 35px;
+
+    min-height: 250px;
+
+    background: var(--blanco);
+
+    border-top: 3px solid var(--plata);
+
+    transition: 0.3s ease;
+
+}
+
+
+.projects-types-grid article:hover {
+
+    border-color: var(--dorado);
+
+    transform: translateY(-6px);
+
+}
+
+
+.projects-types-grid span {
+
+    color: var(--dorado);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+.projects-types-grid h3 {
+
+    color: var(--azul-noche);
+
+    font-size: 24px;
+
+    margin: 45px 0 12px;
+
+}
+
+
+.projects-types-grid p {
+
+    color: var(--gris-oscuro);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.projects-cta {
+
+    padding: 100px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background:
+
+        linear-gradient(
+            110deg,
+            var(--azul-profundo),
+            var(--azul)
+        );
+
+    color: var(--blanco);
+
+}
+
+
+.projects-cta h2 {
+
+    color: var(--blanco);
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    line-height: 1.08;
+
+    margin-bottom: 20px;
+
+}
+
+
+.projects-cta p {
+
+    color: var(--plata);
+
+    max-width: 600px;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+
+    .projects-hero,
+    .projects-gallery,
+    .projects-types,
+    .projects-cta {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
+    }
+
+
+    .projects-types-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+
+    .projects-hero {
+
+        min-height: auto;
+
+        padding: 80px 6%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .projects-hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .projects-hero-number {
+
+        align-items: flex-start;
+
+    }
+
+
+    .projects-hero-number strong {
+
+        font-size: 70px;
+
+    }
+
+
+    .projects-gallery {
+
+        padding: 90px 6%;
+
+    }
+
+
+    .projects-gallery-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .projects-large {
+
+        grid-row: auto;
+
+    }
+
+
+    .projects-image img,
+    .projects-large .projects-image img {
+
+        height: 400px;
+
+    }
+
+
+    .projects-types {
+
+        padding: 90px 6%;
+
+    }
+
+
+    .projects-types-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .projects-cta {
+
+        padding: 90px 6%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PEQUEÑO
+========================================================= */
+
+@media (max-width: 450px) {
+
+
+    .projects-hero h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .projects-image img,
+    .projects-large .projects-image img {
+
+        height: 350px;
+
+    }
+
+
+    .projects-card-info {
+
+        padding: 25px;
+
+    }
+
+
+    .projects-dark {
+
+        min-height: 300px;
+
+        padding: 28px;
+
+    }
+
+}

@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Corporación | Soluciones para tu proyecto</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo de la empresa">
+        </a>
+
+        <nav class="nav" id="nav">
+
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="contacto.html" class="btn-nav">Agendar cita</a>
+
+        </nav>
+
+        <button class="menu-btn" id="menu-btn">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- HERO -->
+
+    
+        <section class="hero-slider" id="inicio">
+            <div class="hero-slides">
+
+        <!-- DIAPOSITIVA 1 -->
+        <article class="hero-slide active">
+            <img src="img/hero.jpg" alt="Proyecto de interiores de HAB HOUSE">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <span class="hero-label">HAB HOUSE CORPORATION SAC</span>
+                <h1>Transformamos espacios en grandes proyectos</h1>
+                <p>
+                    Soluciones integrales para viviendas, oficinas,
+                    comercios y proyectos industriales.
+                </p>
+                <a href="contacto.html" class="hero-button">
+                    SOLICITAR ASESORÍA <span>→</span>
+                </a>
+            </div>
+        </article>
+
+        <!-- DIAPOSITIVA 2 -->
+        <article class="hero-slide">
+            <img src="img/servicios/muebleria.jpg" alt="Muebles diseñados a medida">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <span class="hero-label">DISEÑO Y FABRICACIÓN</span>
+                <h2>Muebles a medida para tus espacios</h2>
+                <p>
+                    Cocinas, closets, escritorios y muebles personalizados
+                    con acabados pensados para cada proyecto.
+                </p>
+                <a href="servicios/muebleria.html" class="hero-button">
+                    VER MUEBLERÍA <span>→</span>
+                </a>
+            </div>
+        </article>
+
+        <!-- DIAPOSITIVA 3 -->
+        <article class="hero-slide">
+            <img src="img/servicios/electricidad.jpg" alt="Instalaciones eléctricas">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <span class="hero-label">SOLUCIONES ESPECIALIZADAS</span>
+                <h2>Instalaciones seguras para cada proyecto</h2>
+                <p>
+                    Servicios eléctricos domiciliarios e industriales
+                    adaptados a las necesidades de tu espacio.
+                </p>
+                <a href="servicios/electricidad.html" class="hero-button">
+                    VER ELECTRICIDAD <span>→</span>
+                </a>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- FLECHAS LATERALES -->
+    <button class="hero-arrow hero-prev" id="hero-prev"
+            type="button" aria-label="Banner anterior">‹</button>
+
+    <button class="hero-arrow hero-next" id="hero-next"
+            type="button" aria-label="Banner siguiente">›</button>
+
+    <!-- INDICADORES INFERIORES -->
+    <div class="hero-dots" id="hero-dots">
+        <button class="hero-dot active" type="button"
+                aria-label="Mostrar banner 1"></button>
+        <button class="hero-dot" type="button"
+                aria-label="Mostrar banner 2"></button>
+        <button class="hero-dot" type="button"
+                aria-label="Mostrar banner 3"></button>
+    </div>
+</section>
+
+<!-- FRANJA DE BENEFICIOS -->
+<section class="benefits-strip">
+    <article class="benefit-item">
+        <div class="benefit-icon">✓</div>
+        <div>
+            <h3>Atención personalizada</h3>
+            <p>Coordinamos contigo cada etapa.</p>
+        </div>
+    </article>
+
+    <article class="benefit-item">
+        <div class="benefit-icon">⌂</div>
+        <div>
+            <h3>Soluciones integrales</h3>
+            <p>Distintos servicios para tu proyecto.</p>
+        </div>
+    </article>
+
+    <article class="benefit-item">
+        <div class="benefit-icon">✦</div>
+        <div>
+            <h3>Acabados a medida</h3>
+            <p>Detalles adaptados a tus espacios.</p>
+        </div>
+    </article>
+
+    <article class="benefit-item">
+        <div class="benefit-icon">◆</div>
+        <div>
+            <h3>Compromiso y coordinación</h3>
+            <p>Planificación según tus necesidades.</p>
+        </div>
+    </article>
+</section>
+
+
+        
+        <!-- ================ OFERTAS DE LA SEMANA ================ -->
+
+        <section class="weekly-offers" id="ofertas">
+
+            <div class="offers-heading">
+                <div>
+                    <span class="section-label">PROMOCIONES DESTACADAS</span>
+                    <h2>Ofertas de la semana</h2>
+                    <p>
+                        Descubre nuestros servicios destacados y encuentra
+                        soluciones para tu próximo proyecto.
+                    </p>
+                </div>
+
+                <div class="offers-controls">
+                    <button type="button" id="offers-prev"
+                        aria-label="Ofertas anteriores">‹</button>
+                    <button type="button" id="offers-next"
+                        aria-label="Ofertas siguientes">›</button>
+                </div>
+            </div>
+
+            <div class="offers-track" id="offers-track">
+
+                <!-- ELECTRICIDAD -->
+                <article class="offer-card">
+                    <a href="servicios/electricidad.html" class="offer-image">
+                        <img src="img/servicios/electricidad.jpg"
+                            alt="Servicio de electricidad">
+                        <span class="offer-tag">SERVICIO DESTACADO</span>
+                    </a>
+                    <div class="offer-info">
+                        <span class="offer-category">ELECTRICIDAD</span>
+                        <h3>Instalaciones eléctricas</h3>
+                        <p>Soluciones domiciliarias e industriales para tu proyecto.</p>
+                        <a href="servicios/electricidad.html" class="offer-link">
+                            Conocer servicio <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- MUEBLERÍA -->
+                <article class="offer-card">
+                    <a href="servicios/muebleria.html" class="offer-image">
+                        <img src="img/servicios/muebleria.jpg"
+                            alt="Muebles a medida">
+                        <span class="offer-tag">DISEÑO A MEDIDA</span>
+                    </a>
+                    <div class="offer-info">
+                        <span class="offer-category">MUEBLERÍA</span>
+                        <h3>Muebles personalizados</h3>
+                        <p>Cocinas, closets y muebles de melamina adaptados a tu espacio.</p>
+                        <a href="servicios/muebleria.html" class="offer-link">
+                            Conocer servicio <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- GASFITERÍA -->
+                <article class="offer-card">
+                    <a href="servicios/gasfiteria.html" class="offer-image">
+                        <img src="img/servicios/gasfiteria.jpg"
+                            alt="Trabajos de gasfitería">
+                        <span class="offer-tag">SERVICIO DESTACADO</span>
+                    </a>
+                    <div class="offer-info">
+                        <span class="offer-category">GASFITERÍA</span>
+                        <h3>Instalaciones sanitarias</h3>
+                        <p>Soluciones de agua, desagüe y accesorios sanitarios.</p>
+                        <a href="servicios/gasfiteria.html" class="offer-link">
+                            Conocer servicio <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PINTURA -->
+                <article class="offer-card">
+                    <a href="servicios/pintura.html" class="offer-image">
+                        <img src="img/servicios/pintura.jpg"
+                            alt="Servicio de pintura">
+                        <span class="offer-tag">RENUEVA TU ESPACIO</span>
+                    </a>
+                    <div class="offer-info">
+                        <span class="offer-category">PINTURA</span>
+                        <h3>Acabados y pintura</h3>
+                        <p>Renovación de ambientes residenciales y comerciales.</p>
+                        <a href="servicios/pintura.html" class="offer-link">
+                            Conocer servicio <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- VIDRIERÍA -->
+                <article class="offer-card">
+                    <a href="servicios/vidrieria.html" class="offer-image">
+                        <img src="img/servicios/vidrieria.jpg"
+                            alt="Trabajos de vidriería">
+                        <span class="offer-tag">SOLUCIONES A MEDIDA</span>
+                    </a>
+                    <div class="offer-info">
+                        <span class="offer-category">VIDRIERÍA</span>
+                        <h3>Vidrios y espejos</h3>
+                        <p>Espejos decorativos, vidrios y soluciones personalizadas.</p>
+                        <a href="servicios/vidrieria.html" class="offer-link">
+                            Conocer servicio <span>→</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="offers-progress" aria-hidden="true">
+                <span id="offers-progress-bar"></span>
+            </div>
+
+        </section>
+
+
+        <!-- ================= NOSOTROS ================= -->
+
+        <section class="about">
+
+            <div class="about-image">
+
+                <img src="img/nosotros.jpg" alt="Nuestro trabajo">
+
+            </div>
+
+            <div class="about-content">
+
+                <span class="section-label">
+                    SOBRE NOSOTROS
+                </span>
+
+                <h2>
+                    Soluciones integrales para cada espacio.
+                </h2>
+
+                <p>
+                    Somos una empresa especializada en soluciones para
+                    proyectos residenciales, comerciales, corporativos
+                    e industriales.
+                </p>
+
+                <p>
+                    Trabajamos cada proyecto de acuerdo con las necesidades
+                    de nuestros clientes, cuidando cada detalle desde la
+                    planificación hasta la ejecución.
+                </p>
+
+                <a href="nosotros.html" class="text-link">
+                    Conoce más sobre nosotros →
+                </a>
+
+            </div>
+
+        </section>
+
+                                
+
+        
+        <!-- ================= SERVICIOS ================= -->
+
+        <section class="services" id="servicios">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    NUESTROS SERVICIOS
+                </span>
+
+                <h2>
+                    Soluciones para cada etapa de tu proyecto.
+                </h2>
+
+                <p>
+                    Contamos con diferentes especialidades para ofrecer
+                    soluciones integrales.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <!-- ELECTRICIDAD -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Electricidad
+                    </h3>
+
+                    <p>
+                        Soluciones eléctricas domiciliarias e industriales.
+                    </p>
+
+                    <a href="servicios/electricidad.html">
+                        Ver servicio →
+                    </a>
+
+                </article>
+
+
+                <!-- GASFITERÍA -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        🚿
+                    </div>
+
+                    <h3>
+                        Gasfitería
+                    </h3>
+
+                    <p>
+                        Instalaciones de agua, desagüe y sistemas sanitarios.
+                    </p>
+
+                    <a href="servicios/gasfiteria.html">
+                        Ver servicio →
+                    </a>
+
+                </article>
+
+
+                <!-- MUEBLERÍA -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        🪑
+                    </div>
+
+                    <h3>
+                        Mueblería
+                    </h3>
+
+                    <p>
+                        Muebles de melamina y soluciones a medida.
+                    </p>
+
+                    <a href="servicios/muebleria.html">
+                        Ver servicio →
+                    </a>
+
+                </article>
+
+
+                <!-- PINTURA -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        Pintura
+                    </h3>
+
+                    <p>
+                        Acabados para hogares, oficinas y proyectos comerciales.
+                    </p>
+
+                    <a href="servicios/pintura.html">
+                        Ver servicio →
+                    </a>
+
+                </article>
+
+
+                <!-- VIDRIERÍA -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        🪟
+                    </div>
+
+                    <h3>
+                        Vidriería
+                    </h3>
+
+                    <p>
+                        Vidrios, espejos, acrílicos y soluciones especiales.
+                    </p>
+
+                    <a href="servicios/vidrieria.html">
+                        Ver servicio →
+                    </a>
+
+                </article>
+
+
+                <!-- PISOS -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        ▦
+                    </div>
+
+                    <h3>
+                        Pisos y alfombras
+                    </h3>
+
+                    <p>
+                        Venta, instalación y mantenimiento de diferentes
+                        tipos de pisos.
+                    </p>
+
+                    <a href="servicios/pisos.html">
+                        Ver servicio →
+                    </a>
+
+                </article>
+
+
+                <!-- SOL Y SOMBRA -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        ☀
+                    </div>
+
+                    <h3>
+                        Sol y sombra
+                    </h3>
+
+                    <p>
+                        Pérgolas, estructuras y techos para diferentes espacios.
+                    </p>
+
+                    <a href="servicios/sol-y-sombra.html">
+                        Ver servicio →
+                    </a>
+
+                </article>
+
+
+                <!-- MANTENIMIENTO -->
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        🔧
+                    </div>
+
+                    <h3>
+                        Mantenimiento
+                    </h3>
+
+                    <p>
+                        Mantenimiento general para diferentes tipos de proyectos.
+                    </p>
+
+                    <a href="servicios/mantenimiento.html">
+                        Ver servicio →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROYECTOS ================= -->
+
+        <section class="projects">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    NUESTROS PROYECTOS
+                </span>
+
+                <h2>
+                    Trabajos que hablan por nosotros.
+                </h2>
+
+                <p>
+                    Conoce algunos de nuestros trabajos y soluciones.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+
+                    <img src="img/proyectos/proyecto-1.jpg" alt="Proyecto">
+
+                    <div class="project-info">
+
+                        <span>
+                            MUEBLERÍA
+                        </span>
+
+                        <h3>
+                            Proyecto residencial
+                        </h3>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <img src="img/proyectos/proyecto-2.jpg" alt="Proyecto">
+
+                    <div class="project-info">
+
+                        <span>
+                            PINTURA
+                        </span>
+
+                        <h3>
+                            Proyecto corporativo
+                        </h3>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <img src="img/proyectos/proyecto-3.jpg" alt="Proyecto">
+
+                    <div class="project-info">
+
+                        <span>
+                            VIDRIERÍA
+                        </span>
+
+                        <h3>
+                            Proyecto comercial
+                        </h3>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="center">
+
+                <a href="proyectos.html" class="btn">
+                    Ver todos los proyectos
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= POR QUÉ ELEGIRNOS ================= -->
+
+        <section class="why-us">
+
+            <div class="section-header">
+
+                <span class="section-label">
+                    ¿POR QUÉ ELEGIRNOS?
+                </span>
+
+                <h2>
+                    Trabajamos pensando en cada detalle.
+                </h2>
+
+            </div>
+
+
+            <div class="features">
+
+                <article>
+
+                    <span>01</span>
+
+                    <h3>
+                        Trabajo a medida
+                    </h3>
+
+                    <p>
+                        Adaptamos nuestras soluciones a las necesidades
+                        de cada proyecto.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>02</span>
+
+                    <h3>
+                        Calidad
+                    </h3>
+
+                    <p>
+                        Buscamos ofrecer acabados y soluciones con materiales
+                        adecuados para cada proyecto.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>03</span>
+
+                    <h3>
+                        Experiencia
+                    </h3>
+
+                    <p>
+                        Contamos con personal especializado para diferentes
+                        áreas de trabajo.
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>04</span>
+
+                    <h3>
+                        Garantía
+                    </h3>
+
+                    <p>
+                        Ofrecemos garantía de acuerdo con las condiciones
+                        establecidas en cada contrato.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta">
+
+            <div>
+
+                <span class="section-label">
+                    ¿TIENES UN PROYECTO?
+                </span>
+
+                <h2>
+                    Hablemos de lo que necesitas.
+                </h2>
+
+                <p>
+                    Cuéntanos sobre tu proyecto y coordinemos una cita
+                    con nuestro equipo.
+                </p>
+
+            </div>
+
+
+            <a href="contacto.html" class="btn">
+                Agendar una cita →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <img src="img/logo.png" alt="Logo" class="footer-logo">
+
+                <p>
+                    Soluciones integrales para proyectos residenciales,
+                    comerciales y corporativos.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Navegación
+                </h3>
+
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="contacto.html">Contacto</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    Teléfono: +51 999 999 999
+                </p>
+
+                <p>
+                    Email: contacto@empresa.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Corporación. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

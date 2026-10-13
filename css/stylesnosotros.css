@@ -1,0 +1,936 @@
+    /* =========================================================
+   HAB HOUSE CORPORATION SAC
+   STYLESNOSOTROS.CSS
+   Diseño exclusivo para nosotros.html
+========================================================= */
+
+
+/* =========================================================
+   1. HERO NOSOTROS
+========================================================= */
+
+.about-hero {
+
+    min-height: 75vh;
+
+    padding: 90px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(23, 71, 109, 0.45),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--azul-noche),
+            var(--azul-profundo)
+        );
+
+    color: var(--blanco);
+
+    overflow: hidden;
+
+}
+
+
+/* CONTENIDO */
+
+.about-hero-content {
+
+    max-width: 650px;
+
+    animation: nosotros-aparecer 1s ease forwards;
+
+}
+
+
+.about-hero-content h1 {
+
+    font-size: clamp(45px, 5vw, 72px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.about-hero-content h1 span {
+
+    display: block;
+
+    color: var(--dorado-claro);
+
+}
+
+
+.about-hero-content p {
+
+    max-width: 580px;
+
+    color: var(--plata);
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* IMAGEN */
+
+.about-hero-image {
+
+    position: relative;
+
+}
+
+
+.about-hero-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 2px solid var(--dorado);
+
+    top: 20px;
+
+    left: 20px;
+
+}
+
+
+.about-hero-image img {
+
+    height: 560px;
+
+    object-fit: cover;
+
+    position: relative;
+
+    z-index: 1;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+/* =========================================================
+   2. QUIÉNES SOMOS
+========================================================= */
+
+.about-company {
+
+    padding: 120px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 90px;
+
+    background: var(--blanco);
+
+}
+
+
+/* IMAGEN */
+
+.about-company-image {
+
+    position: relative;
+
+}
+
+
+.about-company-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    left: -25px;
+
+    bottom: -25px;
+
+    border-left: 3px solid var(--dorado);
+
+    border-bottom: 3px solid var(--dorado);
+
+}
+
+
+.about-company-image img {
+
+    height: 560px;
+
+    object-fit: cover;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* TEXTO */
+
+.about-company-content {
+
+    max-width: 650px;
+
+}
+
+
+.about-company-content h2 {
+
+    color: var(--azul-noche);
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    line-height: 1.08;
+
+    margin-bottom: 30px;
+
+}
+
+
+.about-company-content p {
+
+    color: var(--gris-oscuro);
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================================
+   3. TIPOS DE PROYECTOS
+========================================================= */
+
+.about-project-types {
+
+    padding: 120px 7%;
+
+    background: var(--blanco-suave);
+
+}
+
+
+.about-project-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.about-project-card {
+
+    min-height: 280px;
+
+    padding: 35px;
+
+    background: var(--blanco);
+
+    border: 1px solid #e2e5e8;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: all 0.35s ease;
+
+}
+
+
+/* Línea superior */
+
+.about-project-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 4px;
+
+    background: var(--dorado);
+
+    transition: 0.35s ease;
+
+}
+
+
+.about-project-card:hover::before {
+
+    width: 100%;
+
+}
+
+
+.about-project-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(217, 154, 0, 0.4);
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.about-project-card > span {
+
+    color: var(--dorado);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+.about-project-card h3 {
+
+    color: var(--azul-noche);
+
+    font-size: 25px;
+
+    margin: 45px 0 15px;
+
+}
+
+
+.about-project-card p {
+
+    color: var(--gris-oscuro);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   4. FORMA DE TRABAJAR
+========================================================= */
+
+.about-process {
+
+    padding: 120px 7%;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 100px;
+
+    align-items: start;
+
+    background: var(--blanco);
+
+}
+
+
+.about-process-content {
+
+    position: sticky;
+
+    top: 140px;
+
+}
+
+
+.about-process-content h2 {
+
+    color: var(--azul-noche);
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    line-height: 1.08;
+
+    margin-bottom: 25px;
+
+}
+
+
+.about-process-content p {
+
+    color: var(--gris-oscuro);
+
+    margin-bottom: 20px;
+
+}
+
+
+.about-process-steps {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.about-process-steps article {
+
+    padding: 35px;
+
+    border-top: 2px solid var(--plata);
+
+    transition: 0.3s ease;
+
+}
+
+
+.about-process-steps article:hover {
+
+    border-color: var(--dorado);
+
+    transform: translateY(-5px);
+
+}
+
+
+.about-process-steps span {
+
+    color: var(--dorado);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+.about-process-steps h3 {
+
+    color: var(--azul-noche);
+
+    font-size: 22px;
+
+    margin: 18px 0 12px;
+
+}
+
+
+.about-process-steps p {
+
+    color: var(--gris-oscuro);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   5. ESPECIALIDADES
+========================================================= */
+
+.about-specialties {
+
+    padding: 120px 7%;
+
+    background: var(--azul-noche);
+
+    color: var(--blanco);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.about-specialties::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border: 1px solid rgba(217, 154, 0, 0.12);
+
+    border-radius: 50%;
+
+    right: -250px;
+
+    top: -250px;
+
+}
+
+
+.about-specialties .section-header {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.about-specialties .section-header h2 {
+
+    color: var(--blanco);
+
+}
+
+
+.about-specialties .section-header p {
+
+    color: var(--plata);
+
+}
+
+
+.about-specialties-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 0;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.about-specialties-grid > div {
+
+    min-height: 130px;
+
+    padding: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.3s ease;
+
+}
+
+
+.about-specialties-grid > div:hover {
+
+    background: var(--azul);
+
+    border-color: var(--dorado);
+
+}
+
+
+.about-specialties-grid strong {
+
+    color: var(--dorado);
+
+    font-size: 13px;
+
+}
+
+
+.about-specialties-grid span {
+
+    color: var(--blanco);
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   6. COMPROMISO
+========================================================= */
+
+.about-values {
+
+    padding: 120px 7%;
+
+    background: var(--blanco-suave);
+
+}
+
+
+.about-values-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.about-values-grid article {
+
+    padding: 30px 0;
+
+    border-top: 2px solid var(--plata);
+
+    transition: 0.3s ease;
+
+}
+
+
+.about-values-grid article:hover {
+
+    border-color: var(--dorado);
+
+    transform: translateY(-5px);
+
+}
+
+
+.about-values-grid span {
+
+    color: var(--dorado);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+.about-values-grid h3 {
+
+    color: var(--azul-noche);
+
+    font-size: 23px;
+
+    margin: 18px 0;
+
+}
+
+
+.about-values-grid p {
+
+    color: var(--gris-oscuro);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   7. ANIMACIÓN
+========================================================= */
+
+@keyframes nosotros-aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   8. TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+
+    .about-hero,
+    .about-company {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
+        gap: 50px;
+
+    }
+
+
+    .about-project-types,
+    .about-process,
+    .about-specialties,
+    .about-values {
+
+        padding-left: 5%;
+
+        padding-right: 5%;
+
+    }
+
+
+    .about-project-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .about-specialties-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .about-values-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   9. MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+
+    /* HERO */
+
+    .about-hero {
+
+        grid-template-columns: 1fr;
+
+        padding: 80px 6%;
+
+        gap: 60px;
+
+        min-height: auto;
+
+    }
+
+
+    .about-hero-content h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .about-hero-content p {
+
+        font-size: 16px;
+
+    }
+
+
+    .about-hero-image img {
+
+        height: 400px;
+
+    }
+
+
+    .about-hero-image::before {
+
+        top: 10px;
+
+        left: 10px;
+
+    }
+
+
+    /* COMPANY */
+
+    .about-company {
+
+        grid-template-columns: 1fr;
+
+        padding: 90px 6%;
+
+        gap: 55px;
+
+    }
+
+
+    .about-company-image img {
+
+        height: 400px;
+
+    }
+
+
+    /* PROJECTS */
+
+    .about-project-types {
+
+        padding: 90px 6%;
+
+    }
+
+
+    .about-project-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* PROCESS */
+
+    .about-process {
+
+        padding: 90px 6%;
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+
+    .about-process-content {
+
+        position: static;
+
+    }
+
+
+    .about-process-steps {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* SPECIALTIES */
+
+    .about-specialties {
+
+        padding: 90px 6%;
+
+    }
+
+
+    .about-specialties-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* VALUES */
+
+    .about-values {
+
+        padding: 90px 6%;
+
+    }
+
+
+    .about-values-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   10. MOBILE PEQUEÑO
+========================================================= */
+
+@media (max-width: 450px) {
+
+
+    .about-hero-content h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .about-hero-image img {
+
+        height: 350px;
+
+    }
+
+
+    .about-company-image img {
+
+        height: 350px;
+
+    }
+
+
+    .about-project-card {
+
+        padding: 28px;
+
+    }
+
+
+    .about-specialties-grid > div {
+
+        min-height: 110px;
+
+        padding: 25px;
+
+    }
+
+}
