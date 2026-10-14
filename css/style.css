@@ -1749,48 +1749,72 @@ section {
 }
 
 /* CELULAR */
-
 @media (max-width: 650px) {
     .weekly-offers {
-        padding: 75px 6%;
+        padding: 65px 5% !important;
     }
 
     .offers-heading {
         align-items: flex-start;
         flex-direction: column;
+        gap: 20px;
+        margin-bottom: 25px;
     }
 
+    .offers-heading h2 {
+        font-size: clamp(28px, 7vw, 36px);
+    }
+
+    .offers-heading p {
+        font-size: 14px;
+    }
+ 
     .offers-controls {
         align-self: flex-end;
     }
 
+    .offers-controls button {
+        width: 42px;
+        height: 42px;
+    }
+
     .offers-track {
-    display: grid;
-    grid-auto-columns: calc((100% - 60px) / 3);
-    grid-auto-flow: column;
-    gap: 30px;
+        display: grid;
+        grid-auto-columns: 85%;
+        grid-auto-flow: column;
+        gap: 18px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scroll-padding-left: 0;
+        scrollbar-width: none;
+        padding: 5px 0 18px;
+        margin: 0;
+    }
 
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scroll-padding-left: 0;
-    scrollbar-width: none;
-
-    padding: 5px 0 18px;
-    margin: 0;
+    .offers-track::-webkit-scrollbar {
+        display: none;
     }
 
     .offer-card {
-    min-width: 0;
-    scroll-snap-align: start;
+        min-width: 0;
+        scroll-snap-align: start;
     }
 
     .offer-image {
-        height: 220px;
+        height: 200px;
     }
 
     .offer-info {
-        padding: 22px;
+        padding: 20px;
+    }
+
+    .offer-info h3 {
+        font-size: 20px;
+    }
+
+    .offer-info p {
+        min-height: auto;
     }
 }
 
@@ -2121,5 +2145,188 @@ section {
 
     .benefit-item {
         padding: 14px;
+    }
+}
+
+
+/* AJUSTE FINAL DEL BANNER EN CELULARES */
+
+@media (max-width: 600px) {
+    .hero-slider {
+        height: 500px;
+    }
+
+    .hero-slide {
+        padding: 40px 12% 55px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        font-size: clamp(29px, 8vw, 40px);
+        line-height: 1.12;
+        letter-spacing: -0.5px;
+        overflow-wrap: break-word;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 22px;
+    }
+
+    .hero-button {
+        max-width: 100%;
+        gap: 10px;
+        padding: 12px;
+        font-size: 10px;
+    }
+
+    .hero-arrow {
+        width: 28px;
+        height: 48px;
+        font-size: 30px;
+    }
+
+    .benefits-strip {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 20px 5% !important;
+    }
+}
+
+
+/* =========================================
+   AJUSTE RESPONSIVE DE LOS LOGOS
+========================================= */
+
+/* Mantener el logo proporcionado en escritorio */
+.header .logo img {
+    display: block;
+    width: 85px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Tablet y celular */
+@media (max-width: 750px) {
+    .header {
+        height: 75px;
+        padding: 0 5%;
+        gap: 12px;
+    }
+
+    .header .logo img {
+        width: 82px;
+    }
+
+    .footer-logo {
+        width: 120px;
+        max-width: 100%;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 450px) {
+    .header {
+        height: 68px;
+        padding: 0 4%;
+        gap: 8px;
+    }
+
+    .header .logo img {
+        width: 70px;
+    }
+
+    .menu-btn {
+        font-size: 27px;
+    }
+
+    .nav {
+        top: 68px;
+    }
+
+    .footer-logo {
+        width: 105px;
+    }
+}
+
+
+/* CORRECCIÓN DEFINITIVA: LOGO DENTRO DEL HEADER */
+
+.header {
+    box-sizing: border-box;
+    height: 75px;
+    min-height: 75px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 1;
+    min-width: 0;
+    height: 100%;
+    max-width: 40%;
+    overflow: hidden;
+}
+
+.header .logo img {
+    display: block;
+    width: 82px;
+    max-width: 100%;
+    height: auto;
+    max-height: 52px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* CELULARES */
+@media (max-width: 750px) {
+    .header {
+        height: 68px;
+        min-height: 68px;
+        padding: 0 16px;
+    }
+
+    .header .logo {
+        max-width: 38%;
+        max-height: 100%;
+    }
+
+    .header .logo img {
+        width: 72px;
+        max-height: 44px;
+    }
+
+    .header .menu-btn {
+        flex-shrink: 0;
+        margin: 0;
+    }
+
+    .header .nav {
+        top: 68px;
+    }
+}
+
+/* CELULARES ESTRECHOS */
+@media (max-width: 380px) {
+    .header {
+        padding: 0 12px;
+    }
+
+    .header .logo img {
+        width: 64px;
+        max-height: 40px;
     }
 }
